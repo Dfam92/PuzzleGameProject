@@ -25,10 +25,12 @@ public class PlayerControl : MonoBehaviour
     }
     private void PlayerMovement()
     {
-        float vInput = Input.GetAxis("Vertical");
+        Vector3 mousePos = Input.mousePosition;
+        transform.position = mousePos;
+        /*float vInput = Input.GetAxis("Vertical");
         float hInput = Input.GetAxis("Horizontal");
         playerRb.AddForce(cameraPlayer.transform.up * vInput * speed);
-        playerRb.AddForce(cameraPlayer.transform.right * hInput * speed);
+        playerRb.AddForce(cameraPlayer.transform.right * hInput * speed);*/
        
     }
 }
