@@ -28,9 +28,9 @@ public class PlayerControl : MonoBehaviour
         Vector3 mousePos = Input.mousePosition;
         transform.position = mousePos;
         /*float vInput = Input.GetAxis("Vertical");
-        float hInput = Input.GetAxis("Horizontal");
+        
         playerRb.AddForce(cameraPlayer.transform.up * vInput * speed);
-        playerRb.AddForce(cameraPlayer.transform.right * hInput * speed);*/
+        */
        
     }
 }
