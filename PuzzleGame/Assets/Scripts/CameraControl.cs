@@ -23,7 +23,7 @@ public class CameraControl : MonoBehaviour
     }
     private void LateUpdate()
     {
-        CameraHorizontalMovement();
+        //CameraHorizontalMovement();
     }
     private void CameraHorizontalMovement()
     {

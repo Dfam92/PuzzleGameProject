@@ -29,7 +29,11 @@ public class PlayerControl : MonoBehaviour
         float vInput = Input.GetAxis("Vertical");
         
         playerRb.AddForce(Camera.main.transform.up * vInput * speed);
-        
-       
+
+        float hInput = Input.GetAxis("Horizontal");
+
+        playerRb.AddForce(Camera.main.transform.right * hInput * speed);
+
+
     }
 }
