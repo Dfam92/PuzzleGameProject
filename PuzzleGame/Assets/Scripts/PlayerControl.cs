@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class PlayerControl : MonoBehaviour
 {
-    public Rigidbody playerRb;
+    private Rigidbody playerRb;
     [SerializeField] private float speed;
-    public GameObject cameraPlayer;
+   
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        playerRb = GetComponent<Rigidbody>();
     }
     private void FixedUpdate()
     {
@@ -25,12 +25,11 @@ public class PlayerControl : MonoBehaviour
     }
     private void PlayerMovement()
     {
-        Vector3 mousePos = Input.mousePosition;
-        transform.position = mousePos;
-        /*float vInput = Input.GetAxis("Vertical");
         
-        playerRb.AddForce(cameraPlayer.transform.up * vInput * speed);
-        */
+        float vInput = Input.GetAxis("Vertical");
+        
+        playerRb.AddForce(Camera.main.transform.up * vInput * speed);
+        
        
     }
 }
